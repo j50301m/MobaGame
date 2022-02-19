@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5402F16F-B27F-492D-89FB-E5C2D258876C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MobaServer</RootNamespace>
+    <AssemblyName>MobaServer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>E:\MobaGame_develope\moba1\资料\litjson\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\MobaGame_develope\moba2\资料\MySQL数据库安装包\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBCMD\DBBase.cs" />
+    <Compile Include="DBCMD\DBRolesInfo.cs" />
+    <Compile Include="DBCMD\DBUserInfo.cs" />
+    <Compile Include="Dispatcher\EventBase.cs" />
+    <Compile Include="Dispatcher\NetEvent.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="GameModule\BattleModule.cs" />
+    <Compile Include="GameModule\GameModuleBase.cs" />
+    <Compile Include="GameModule\LobbyModule.cs" />
+    <Compile Include="GameModule\RolesModule.cs" />
+    <Compile Include="GameModule\RoomModule.cs" />
+    <Compile Include="GameModule\UserModule.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\Singleton.cs" />
+    <Compile Include="Helper\TimeHelper.cs" />
+    <Compile Include="Log\Debug.cs" />
+    <Compile Include="Match\MatchEntity.cs" />
+    <Compile Include="Match\MatchManager.cs" />
+    <Compile Include="MySql\MySqlCMD.cs" />
+    <Compile Include="MySql\MySqlEntity.cs" />
+    <Compile Include="MySql\MySqlHelper.cs" />
+    <Compile Include="Net\BufferEntity.cs" />
+    <Compile Include="Net\BufferFactory.cs" />
+    <Compile Include="Net\UClient.cs" />
+    <Compile Include="Net\USocket.cs" />
+    <Compile Include="Player\PlayerEntity.cs" />
+    <Compile Include="Player\PlayerManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protobuf\cs\BattlePB.cs" />
+    <Compile Include="Protobuf\cs\LobbyPB.cs" />
+    <Compile Include="Protobuf\cs\RolesPB.cs" />
+    <Compile Include="Protobuf\cs\RoomPB.cs" />
+    <Compile Include="Protobuf\cs\RootPB.cs" />
+    <Compile Include="Protobuf\cs\UserPB.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\ByteArray.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\ByteString.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\CodedInputStream.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\CodedOutputStream.ComputeSize.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\CodedOutputStream.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\Collections\RepeatedField.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\Compatibility\PropertyInfoExtensions.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\Compatibility\StreamExtensions.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\FieldCodec.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\ICustomDiagnosticMessage.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\IMessage.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\InvalidProtocolBufferException.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\LimitedInputStream.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\MessageExtensions.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\MessageParser.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\ProtobufHelper.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\ProtoPreconditions.cs" />
+    <Compile Include="Protobuf\Google.Protobuf\WireFormat.cs" />
+    <Compile Include="Room\RoomEntity.cs" />
+    <Compile Include="Room\RoomManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Protobuf\Google.Protobuf\ByteArray.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\ByteString.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\CodedInputStream.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\CodedOutputStream.ComputeSize.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\CodedOutputStream.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\Collections.meta" />
+    <None Include="Protobuf\Google.Protobuf\Collections\RepeatedField.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\Compatibility.meta" />
+    <None Include="Protobuf\Google.Protobuf\Compatibility\PropertyInfoExtensions.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\Compatibility\StreamExtensions.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\FieldCodec.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\ICustomDiagnosticMessage.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\IMessage.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\InvalidProtocolBufferException.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\LimitedInputStream.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\MessageExtensions.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\MessageParser.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\ProtobufHelp.meta" />
+    <None Include="Protobuf\Google.Protobuf\ProtobufHelper.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\ProtoPreconditions.cs.meta" />
+    <None Include="Protobuf\Google.Protobuf\WireFormat.cs.meta" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

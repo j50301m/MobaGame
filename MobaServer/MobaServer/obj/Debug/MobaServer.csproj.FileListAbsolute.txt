@@ -1,0 +1,10 @@
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\bin\Debug\MobaServer.exe.config
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\bin\Debug\MobaServer.exe
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\bin\Debug\MobaServer.pdb
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\bin\Debug\LitJson.dll
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\bin\Debug\MySql.Data.dll
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\obj\Debug\MobaServer.csproj.CoreCompileInputs.cache
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\obj\Debug\MobaServer.csproj.CopyComplete
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\obj\Debug\MobaServer.exe
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\obj\Debug\MobaServer.pdb
+C:\Users\j5030\OneDrive\Desktop\Hobby\Test &Learn\MobaServer\MobaServer\obj\Debug\MobaServer.csprojAssemblyReference.cache
